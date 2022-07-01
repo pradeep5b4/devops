@@ -1,0 +1,110 @@
+1) git init   #initiate the git repo in my pprojectfolder
+
+2) touch file1 file2    #create file1 and file2 
+
+3) git status   #give me the status of my projectfolder
+
+4) git add .    #add all the files to staging area
+
+5) git status   #you will see file1 and file2 color changes to green . which means they are in staging area
+
+6) git rm --cached file1    #git remove file1 from cache memory (staging area)
+
+7) git status   (you will see that file1 is now back to working directory and file2 is in staging area)
+
+8) git add .   (file1 will now again be added to staging area)
+
+9) git status   
+
+10) git config --global user.name "akshatgupta"    (only once through your laptop) 
+
+11) git config --global user.email "aksh@gmail.com"   (only once through out ....this mail will be considered if you create other local repo)
+
+12) git config --list 
+
+13) git commit -m"my first commit "   #putting the files from staging area to local repo
+
+14) git status
+
+15) ls   #list of files present in folder 
+
+
+####################################################################
+
+16) open github.com and crate public or pvt repo
+
+17) go back to git bash 
+
+git remote add origin <<link of your repo>>
+
+18) git push -u origin master   ###if there is some error check the windows credentials and delete github already saved credentials
+
+19) git remote -v   #shows you the remote repoo
+
+
+##################################################Ignore the files in Github ##########################
+
+
+
+20) git status
+
+21) touch user.log
+ git status
+22) touch .gitignore    #touch command creates blank file
+
+23) now in .gitignore add user.log    (open .gitignore and paste user.log name there)
+
+24) git status   #you will see only gitignore file
+
+25) git add .
+
+26) git commit -m " gitignore created"
+
+27) now if you add anything in user.log you will see that this file is now ignored 
+
+#################################### WHAT IF THE NEW LOGS FILES ARE CREATING REGULARLY ###################
+
+Copy paste lot of user.log files......akshat.log aman.log naeem.log etc etc
+
+28) open gitignore file
+
+*.log
+
+29) git add .
+
+30) git commit -m "git ignoreaaaa updated"
+
+31) git status
+
+32) create some more logs files
+
+33) git status   #you will see all the files created in point 32 are ignored
+
+#########################################################################################################################
+
+
+################################BRANCHES##################################################################################
+
+34) git branch branch1    #create a new branch with name branch1
+
+35) git branch    #it will show branched...* means active branch
+
+36) git checkout branch1   #you will checkout to branch1 
+
+37) git branch   #you will see * is at branch1 which is active branch
+
+38) touch file1inbranch1.txt
+
+39) git add .
+
+40) git commit-m"file1inbranch.txt is created in brnach1"    
+
+41) git log --oneline    #you will see that commit message from sno 40 is also there
+
+42) git checkout master
+
+43) check folder you will see that file1inbranch1.txt is disappeared 
+
+44) git merge branch1 
+
+45) git log --oneline --graph   #it will show the flow in graphics
