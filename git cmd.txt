@@ -105,6 +105,67 @@ Copy paste lot of user.log files......akshat.log aman.log naeem.log etc etc
 
 43) check folder you will see that file1inbranch1.txt is disappeared 
 
-44) git merge branch1 
+44) git merge branch1      
 
-45) git log --oneline --graph   #it will show the flow in graphics
+45) git log --oneline --graph   #it will show the flow in graphical format
+
+
+(Repeat the steps from 34 to 43 ...)
+
+44.1) git rebase branch1
+
+44.2) git log --oneline --graph 
+
+
+##############################HOW TO SEE THE DIFFERENCE BETWEEN THE FILES IN WORKING AREA AND STAGING AREA ########
+
+
+
+46) cat >file8
+hello world
+
+press ctrl D to exit
+
+47) git add .
+
+48) make some changes in file8  (add content hello akshat)
+
+49) git diff     #git diff file8 #difference btween content of file in staging area and working dir
+
+(you will see that +hello akshat is coming which means this is the difference line in file8 between staging area and working directory)
+
+
+
+#############################################Difference between file chage in  local repo and staging area ######### 
+
+50) git commit -m"put the file8 into local repo"
+
+51) now make the changes in the file8 (add some content)
+
+52) git add .
+
+53) git diff --staged    #it will tell the difference between file content in staging area and local repo 
+
+
+####################################################GIT STASHING ############################
+
+54) create a file9 and add some content to it
+
+55) git stash    #git stash file9 #this will basically move back to previous step
+
+56) git stash list
+
+57) git stash apply stash@{1}
+
+58) git stash clear
+
+############################################TO MOVE TO ANT VERSION ####################################################
+
+59) git log --oneline
+ 
+copy the commit id which you want to move back 
+
+60) git checkout <<version id>>
+
+########################################################################################################### 
+
